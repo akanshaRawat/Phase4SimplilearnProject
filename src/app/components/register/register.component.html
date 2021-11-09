@@ -1,0 +1,84 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+            <h4>SignUp Form : </h4>
+               <div class="form-row">
+                    <!-- First Name -->
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" name="firstName" id="firstName"
+                                formControlName="firstName" aria-describedby="firstNameHelp">
+                            
+                        </div>
+                    </div>
+                    <!-- Last Name -->
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" name="lastName" id="lastName"
+                                formControlName="lastName" aria-describedby="lastNameHelp">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- Email -->
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" name="email" id="email" formControlName="email"
+                                aria-describedby="emailHelp" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                            
+                        </div>
+                    </div>
+                    <!-- Password -->
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                formControlName="password" aria-describedby="passwordHelp" minlength="6" maxlength="15">
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <label for="inputState">State</label>
+                        <select id="inputState" name="state" class="form-control" formControlName="state">
+                            <option value="NY">New York</option>
+                            <option value="TX">Texas</option>
+                            <option value="CA">California</option>
+                            <option value="HW">Hawaii</option>
+                        </select>
+                        
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="inputZip">Zip</label>
+                        <input type="number" class="form-control" id="zipcode" name="zipcode" formControlName="zipcode">
+                        
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="agree" formControlName="agree"
+                                id="agree">
+                            <label class="form-check-label" for="aggree">
+                                Please check the terms and conditions!
+                            </label>
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-block">Submit</button>
+         
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

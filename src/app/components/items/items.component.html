@@ -1,0 +1,46 @@
+
+<div class="container mt-4">
+    <button class="btn-btn-primary" routerLink="/items/create">Create</button><br>
+    <div class="btn-group float-right" role="group" aria-label="Basic example">
+        <button type="button" class="badge badge-info" (click)="filter('all')">All</button>
+        <button type="button" class="badge badge-success" (click)="filter('active')">Active</button>
+        <button type="button" class="badge badge-danger" (click)="filter('inactive')">Inactive</button>
+      </div>
+    <div class="row">
+       
+        <div class="col">
+
+        </div>
+
+        <div class="col-12">
+
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"># Id</th>
+                    <th scope="col"> Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of items">
+                    <th scope="row">{{i.id}}</th>
+                    <td>{{i.name}}</td>
+                    <td>{{i.price}}</td>
+                    <td><a href="#" [class]="i.active ? 'badge badge-success' : 'badge badge-danger'">{{i.active?'Active':'Inactive'}}</a>
+                        </td>
+                    <td>
+                        <a href="#" class="badge badge-warning">Update</a>
+                        <a href="#" class="badge badge-danger">Delete</a>
+                    </td>
+                  </tr>
+                  
+              </table>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+</div>
